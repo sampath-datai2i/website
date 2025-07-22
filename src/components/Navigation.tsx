@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X } from "lucide-react";
 import {
@@ -16,50 +17,50 @@ const Navigation = () => {
     {
       label: "Services",
       items: [
-        "AI Strategy & Advisory",
-        "Platform Deploy & Operate", 
-        "MLOps & AI Governance",
-        "Data Science & Machine Learning",
-        "Generative AI",
-        "Data & AI Governance",
-        "Training & Enablement"
+        { name: "AI Strategy & Advisory", path: "/services/advisory" },
+        { name: "Platform Deploy & Operate", path: "/services/migration" }, 
+        { name: "MLOps & AI Governance", path: "/services/machine-learning-mlops" },
+        { name: "Data Science & Machine Learning", path: "/services/machine-learning-mlops" },
+        { name: "Generative AI", path: "/services/generative-ai" },
+        { name: "Data & AI Governance", path: "/services/data-governance" },
+        { name: "Training & Enablement", path: "/services/training" }
       ]
     },
     {
       label: "Solutions",
       items: [
-        "Migration Services",
-        "Dataiku Solutions",
-        "Databricks Solutions",
-        "Custom AI Solutions"
+        { name: "Migration Services", path: "/services/migration" },
+        { name: "Dataiku Solutions", path: "/solutions/dataiku" },
+        { name: "Databricks Solutions", path: "/solutions/databricks" },
+        { name: "Custom AI Solutions", path: "/solutions/custom-ai" }
       ]
     },
     {
       label: "Industries", 
       items: [
-        "Financial Services",
-        "Retail & Consumer Goods",
-        "Manufacturing",
-        "Healthcare",
-        "Technology"
+        { name: "Financial Services", path: "/industries/financial-services" },
+        { name: "Retail & Consumer Goods", path: "/industries/retail-consumer-goods" },
+        { name: "Manufacturing", path: "/industries/manufacturing" },
+        { name: "Healthcare", path: "/industries/healthcare" },
+        { name: "Technology", path: "/industries/technology" }
       ]
     },
     {
       label: "Insights",
       items: [
-        "Thought Leadership",
-        "Case Studies", 
-        "Whitepapers",
-        "Blog"
+        { name: "Thought Leadership", path: "/thought-leadership" },
+        { name: "Case Studies", path: "/case-studies" }, 
+        { name: "Whitepapers", path: "/resources/whitepapers" },
+        { name: "Blog", path: "/blog" }
       ]
     },
     {
       label: "Company",
       items: [
-        "About Us",
-        "Our Team",
-        "Careers",
-        "Contact"
+        { name: "About Us", path: "/about" },
+        { name: "Our Team", path: "/team" },
+        { name: "Careers", path: "/careers" },
+        { name: "Contact", path: "/contact-us" }
       ]
     }
   ];
@@ -70,7 +71,9 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src={v4cLogo} alt="V4C.ai" className="h-8 w-auto" />
+            <Link to="/">
+              <img src={v4cLogo} alt="V4C.ai" className="h-8 w-auto" />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -85,8 +88,10 @@ const Navigation = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-56 bg-card border-border">
                   {item.items.map((subItem) => (
-                    <DropdownMenuItem key={subItem} className="text-card-foreground hover:bg-muted">
-                      {subItem}
+                    <DropdownMenuItem key={subItem.name} className="text-card-foreground hover:bg-muted">
+                      <Link to={subItem.path} className="w-full">
+                        {subItem.name}
+                      </Link>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -96,9 +101,11 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button variant="primary" size="default">
-              Book a Demo
-            </Button>
+            <Link to="/contact-us">
+              <Button variant="primary" size="default">
+                Book a Demo
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -123,16 +130,18 @@ const Navigation = () => {
                     {item.label}
                   </div>
                   {item.items.map((subItem) => (
-                    <div key={subItem} className="text-muted-foreground px-6 py-1 text-sm hover:text-card-foreground cursor-pointer">
-                      {subItem}
-                    </div>
+                    <Link key={subItem.name} to={subItem.path} className="block text-muted-foreground px-6 py-1 text-sm hover:text-card-foreground cursor-pointer">
+                      {subItem.name}
+                    </Link>
                   ))}
                 </div>
               ))}
               <div className="pt-4">
-                <Button variant="primary" className="w-full">
-                  Book a Demo
-                </Button>
+                <Link to="/contact-us">
+                  <Button variant="primary" className="w-full">
+                    Book a Demo
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
