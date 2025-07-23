@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* V4C.ai Design System - Dark theme with purple gradients and modern aesthetics */
+
+@layer base {
+  :root {
+    /* Default to dark background for initial load */
+    --background: 222 47% 11%; /* navy/slate dark */
+    --foreground: 210 40% 98%; /* Light text on dark */
+
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 220 15% 10%; /* Dark text on cards */
+
+    --popover: 0 0% 98%; /* Slightly off-white for popovers */
+    --popover-foreground: 220 15% 10%; /* Dark text */
+
+    /* Primary purple gradient colors */
+    --primary: 258 76% 52%;
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --primary-glow: 270 100% 70%;
+    
+    /* Secondary blue tones */
+    --secondary: 220 39% 96%; /* Very light gray for secondary */
+    --secondary-foreground: 220 15% 10%; /* Dark text */
+
+    --muted: 220 20% 94%; /* Light gray for muted */
+    --muted-foreground: 220 10% 40%; /* Medium gray text */
+
+    --accent: 258 76% 52%;
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%; /* Light border */
+    --input: 220 13% 91%;
+    --ring: 258 76% 52%;
+
+    /* V4C specific design tokens */
+    --navy-dark: 220 100% 4%;
+    --navy-medium: 220 39% 6%;
+    --navy-light: 220 20% 12%;
+    --purple: 258 76% 52%;
+    --purple-light: 270 100% 70%;
+    --pink: 328 85% 70%;
+    --blue-accent: 220 100% 50%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--purple)), hsl(var(--pink)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--navy-dark)), hsl(var(--navy-medium)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--navy-medium)), hsl(var(--navy-light)));
+    
+    /* Shadows and glows */
+    --shadow-purple: 0 20px 40px hsl(var(--purple) / 0.3);
+    --shadow-card: 0 10px 30px hsl(220 100% 2% / 0.05);
+    --glow-purple: 0 0 40px hsl(var(--purple) / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s ease-out;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 220 15% 10%;
+
+    --sidebar-primary: 220 15% 10%;
+
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 220 13% 91%;
+
+    --sidebar-accent-foreground: 220 15% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%; /* Keep dark for dark mode */
+    --foreground: 210 40% 98%; /* Light text on dark */
+
+    --card: 222.2 84% 4.9%; /* Match background for dark cards */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 258 76% 52%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 258 76% 52%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+@keyframes partner-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
