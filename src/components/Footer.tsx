@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import datai2iLogo from "/datai2i.png";
 
 const Footer = () => {
   const footerSections = [
@@ -47,13 +48,13 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-navy-dark border-t border-border">
+    <footer className="bg-[#1e293b] border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Logo and CTA */}
           <div className="lg:col-span-2">
-            <img src="/datai2i.png" alt="Datai2i" className="h-8 w-auto mb-6" />
+            <img src={datai2iLogo} alt="Datai2i" className="h-28 w-auto object-contain -my-6 mb-6" />
             <p className="text-muted-foreground mb-6 leading-relaxed">
               Empowering organizations to turn data into a strategic asset with AI-driven transformation.
             </p>

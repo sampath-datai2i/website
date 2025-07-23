@@ -33,7 +33,6 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,7 +40,7 @@ const AboutPage = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               About{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Datai2i
+                v4c.ai
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
@@ -51,7 +50,6 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
       {/* Mission Section */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +57,7 @@ const AboutPage = () => {
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Our Mission</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                At Datai2i, we believe that every organization has the potential to harness the 
+                At v4c.ai, we believe that every organization has the potential to harness the 
                 power of artificial intelligence and data to transform their business. Our mission 
                 is to make AI accessible, practical, and impactful for organizations of all sizes.
               </p>
@@ -85,7 +83,6 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
       {/* Values Section */}
       <section className="py-20 bg-navy-medium">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,7 +92,6 @@ const AboutPage = () => {
               These core values guide everything we do and shape how we work with our clients.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <Card key={index} className="bg-gradient-card border-border text-center">
@@ -115,7 +111,6 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -127,11 +122,10 @@ const AboutPage = () => {
           </p>
           <Button variant="primary" size="lg" className="group">
             Get in Touch
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 h-4 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </section>
-
       <Footer />
     </div>
   );

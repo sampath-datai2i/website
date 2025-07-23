@@ -65,14 +65,14 @@ const ServicesGrid = () => {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-background relative border-2 border-[#1e293b]">
+    <section className="py-20 bg-white dark:bg-background relative">
       {/* Background with Dataiku branding effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy-medium/20 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 text-black dark:text-white">
-            Navigating Your Path to{' '}
+          <h2 className="text-4xl font-bold mb-6 text-black dark:text-foreground">
+            Navigating Your Path to{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               AI and Data Success
             </span>
@@ -85,25 +85,25 @@ const ServicesGrid = () => {
               key={index} 
               className={`group cursor-pointer transition-all duration-300 hover:shadow-purple hover:-translate-y-2 ${
                 service.isSpecial 
-                  ? 'bg-gradient-primary text-primary-foreground border-none' 
+                  ? 'bg-gradient-primary text-white border-none' 
                   : 'bg-gradient-card border-border hover:border-primary/50'
               }`}
             >
               <CardContent className="p-6 h-full flex flex-col">
                 <div className={`mb-4 ${
-                  service.isSpecial ? 'text-primary-foreground' : 'text-primary'
+                  service.isSpecial ? 'text-white' : 'text-primary'
                 }`}>
                   {service.icon}
                 </div>
                 
                 <h3 className={`text-lg font-semibold mb-3 ${
-                  service.isSpecial ? 'text-primary-foreground' : 'text-card-foreground'
+                  service.isSpecial ? 'text-white' : 'text-card-foreground'
                 }`}>
                   {service.title}
                 </h3>
                 
                 <p className={`text-sm leading-relaxed flex-1 ${
-                  service.isSpecial ? 'text-primary-foreground/90' : 'text-muted-foreground'
+                  service.isSpecial ? 'text-white/90' : 'text-muted-foreground'
                 }`}>
                   {service.description}
                 </p>
@@ -112,7 +112,7 @@ const ServicesGrid = () => {
                   <div className="mt-4">
                     <Button 
                       variant="outline" 
-                      className="w-full bg-primary-foreground/20 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/30"
+                      className="w-full bg-white/20 border-white/30 text-white hover:bg-white/30"
                     >
                       Book a Demo
                     </Button>

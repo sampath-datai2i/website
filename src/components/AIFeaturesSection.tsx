@@ -36,7 +36,6 @@ const AIFeaturesSection = () => {
       title: "Scalable Model Deployment",
       description: "Deploy and scale machine learning models with ease—ensuring consistent performance and reliability across your organization, powered by Dataiku and Databricks.",
       cta: "Learn More", 
-      link: "/services/machine-learning-mlops",
       image: aiIllustration
     }
   ];
@@ -54,7 +53,6 @@ const AIFeaturesSection = () => {
   return (
     <section className="py-20 bg-white dark:bg-background relative overflow-hidden border-2 border-[#1e293b]">
       {/* Background decoration removed for solid theme background */}
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white">
@@ -69,7 +67,6 @@ const AIFeaturesSection = () => {
             and competitive advantage.
           </p>
         </div>
-
         {/* Feature Slider */}
         <div className="relative">
           <Card className="bg-gradient-card border-border shadow-card">
@@ -90,7 +87,6 @@ const AIFeaturesSection = () => {
                     </Button>
                   </div>
                 </div>
-
                 {/* Image Side */}
                 <div className="relative lg:order-last">
                   <img
@@ -103,7 +99,6 @@ const AIFeaturesSection = () => {
               </div>
             </CardContent>
           </Card>
-
           {/* Navigation Controls */}
           <div className="flex justify-center items-center space-x-4 mt-8">
             <Button
@@ -114,7 +109,6 @@ const AIFeaturesSection = () => {
             >
               <ChevronLeft className="h-5 w-5" />
             </Button>
-            
             <div className="flex space-x-2">
               {features.map((_, index) => (
                 <button
@@ -126,7 +120,6 @@ const AIFeaturesSection = () => {
                 />
               ))}
             </div>
-            
             <Button
               variant="ghost"
               size="icon"

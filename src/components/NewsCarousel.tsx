@@ -10,7 +10,7 @@ const NewsCarousel = () => {
     {
       type: "Press",
       icon: <Newspaper className="h-5 w-5" />,
-      title: "Datai2i Accelerates Databricks Expertise with 100 Certifications",
+      title: "v4c.ai Accelerates Databricks Expertise with 100 Certifications",
       description: "Reinforcing commitment to technical excellence and enterprise readiness"
     },
     {
