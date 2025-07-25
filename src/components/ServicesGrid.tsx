@@ -52,7 +52,7 @@ const ServicesGrid = () => {
     {
       icon: <GraduationCap className="h-8 w-8" />,
       title: "Training & Enablement",
-      description: "Empower your teams with v4c's expert training in Dataiku and Databricks—accelerating AI adoption, unlocking data-driven insights, and driving operational excellence.",
+      description: "Empower your teams with datai2i's expert training in Dataiku and Databricks—accelerating AI adoption, unlocking data-driven insights, and driving operational excellence.",
       link: "/services/advisory"
     },
     {
