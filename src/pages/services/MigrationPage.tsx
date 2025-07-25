@@ -106,7 +106,7 @@ const MigrationPage = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">
-                Why Migrate with v4c.ai?
+                Why Migrate with datai2i?
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
                 Our migration experts have successfully transitioned hundreds of organizations 

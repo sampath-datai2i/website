@@ -38,10 +38,7 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              About{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                v4c.ai
-              </span>
+              About <span className="bg-gradient-primary bg-clip-text text-transparent">datai2i</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               We are a team of AI and data experts dedicated to helping organizations 
@@ -57,7 +54,7 @@ const AboutPage = () => {
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Our Mission</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                At v4c.ai, we believe that every organization has the potential to harness the 
+                At datai2i, we believe that every organization has the potential to harness the 
                 power of artificial intelligence and data to transform their business. Our mission 
                 is to make AI accessible, practical, and impactful for organizations of all sizes.
               </p>

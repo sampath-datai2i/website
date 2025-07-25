@@ -46,7 +46,7 @@ const ContactPage = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      details: "info@v4c.ai",
+      details: "info@datai2i.com",
       description: "Send us an email anytime"
     },
     {
