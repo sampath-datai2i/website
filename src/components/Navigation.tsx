@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 import datai2iLogo from "/datai2i.png";
 
 const Navigation = () => {
@@ -78,23 +77,31 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <DropdownMenu key={item.label}>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="nav" className="flex items-center gap-1 text-[#0f172a] text-lg">
+              <HoverCard key={item.label}>
+                <HoverCardTrigger asChild>
+                  <Button variant="nav" className="flex items-center gap-1 text-foreground text-lg hover:text-white hover:bg-purple-950 transition-transform transition-colors px-4 py-2 rounded-full hover:scale-110">
                     {item.label}
-                    <ChevronDown className="h-4 w-4 text-[#0f172a]" />
                   </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56 bg-card border-border">
-                  {item.items.map((subItem) => (
-                    <DropdownMenuItem key={subItem.name} className="text-[#0f172a] hover:bg-muted text-lg">
-                      <Link to={subItem.path} className="w-full text-[#0f172a]">
-                        {subItem.name}
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-80 bg-white border border-purple-500 shadow-xl rounded-xl p-4 animate-[fadeIn_0.2s_ease,slideIn_0.2s_ease] relative overflow-hidden">
+                  {/* Decorative background pattern/gradient */}
+                  <div className="absolute inset-0 pointer-events-none opacity-10" style={{background: 'linear-gradient(135deg, var(--purple-100), var(--white-100) 60%)'}} />
+                  <div className="relative z-10 grid gap-2">
+                    <h4 className="font-semibold text-card-foreground mb-2">{item.label}</h4>
+                    <div className="grid gap-1">
+                      {item.items.map((subItem) => (
+                        <Link 
+                          key={subItem.name} 
+                          to={subItem.path} 
+                          className="block text-muted-foreground hover:text-card-foreground hover:bg-purple-50 px-3 py-2 rounded-md text-sm transition-colors"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </HoverCardContent>
+              </HoverCard>
             ))}
           </div>
 
@@ -113,9 +120,9 @@ const Navigation = () => {
               variant="ghost" 
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-[#0f172a] text-lg"
+              className="text-foreground text-lg"
             >
-              {isMenuOpen ? <X className="text-[#0f172a] text-lg" /> : <Menu className="text-[#0f172a] text-lg" />}
+              {isMenuOpen ? <X className="text-foreground text-lg" /> : <Menu className="text-foreground text-lg" />}
             </Button>
           </div>
         </div>

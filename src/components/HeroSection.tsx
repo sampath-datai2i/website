@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroBackground from "@/assets/hero-background.jpg";
+// Remove heroBackground import
+// import heroBackground from "@/assets/hero-background.jpg";
 import { useEffect, useState } from "react";
 
 const HeroSection = () => {
@@ -19,30 +20,18 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundColor: '#f8fafc', // slate-50, a neutral light color
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundColor: '#F5F5F5',
+          backgroundImage: 'none',
         }}
       />
-      {/* Floating geometric elements */}
-      <div className="absolute inset-0 z-10">
-        <div className="absolute top-20 left-10 w-16 h-16 bg-blue-accent/20 rounded-lg transform rotate-12 animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-12 h-12 bg-purple/30 rounded transform -rotate-12 animate-pulse delay-100"></div>
-        <div className="absolute bottom-40 left-20 w-20 h-20 bg-pink/20 rounded-lg transform rotate-45 animate-pulse delay-200"></div>
-        <div className="absolute bottom-20 right-10 w-14 h-14 bg-blue-accent/25 rounded transform -rotate-45 animate-pulse delay-300"></div>
-        <div className="absolute top-1/2 left-5 w-8 h-8 bg-purple-light/40 rounded-full animate-pulse delay-400"></div>
-        <div className="absolute top-1/3 right-5 w-10 h-10 bg-pink/30 rounded-full animate-pulse delay-500"></div>
-      </div>
+      {/* Salt Overlay */}
+      <img src="/bg.avif" alt="decorative salt" className="absolute inset-0 z-10 w-full h-full object-cover pointer-events-none opacity-40" />
       {/* Main Content */}
       <div className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
             Empowering{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              AI-Driven
-            </span>
+            <span className="text-primary">AI-Driven</span>
             <br />
             Transformation
           </h1>
@@ -60,8 +49,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-30"></div>
     </section>
   );
 };

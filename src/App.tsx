@@ -47,29 +47,6 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          {/* Theme Toggle Button */}
-          <div style={{ position: 'fixed', top: 16, right: 16, zIndex: 1000 }}>
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              style={{
-                background: 'var(--card)',
-                color: 'var(--foreground)',
-                border: '1px solid var(--border)',
-                borderRadius: 8,
-                padding: '8px 12px',
-                cursor: 'pointer',
-                fontWeight: 600,
-                display: 'flex',
-                alignItems: 'center',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
-              }}
-              aria-label="Toggle theme"
-            >
-              {theme === "dark"
-                ? <Moon size={20} color="#fff" />
-                : <Sun size={20} color="#000" />}
-            </button>
-          </div>
           <Routes>
             <Route path="/" element={<Index />} />
           
