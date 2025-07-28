@@ -55,13 +55,11 @@ const AIFeaturesSection = () => {
       {/* Background decoration removed for solid theme background */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{color: '#685874'}}>
             AI and Machine Learning,{' '}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Simplified
-            </span>
+            <span style={{color: '#A08AB1'}}>Simplified</span>
           </h2>
-          <p className="text-xl max-w-4xl mx-auto text-black dark:text-white">
+          <p className="text-xl max-w-4xl mx-auto" style={{color: '#685874'}}>
             Datai2i enables organizations to elevate their AI initiatives with strategic 
             Dataiku, Databricks, and generative AI solutions, driving measurable results 
             and competitive advantage.
@@ -74,10 +72,10 @@ const AIFeaturesSection = () => {
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Content Side */}
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
-                  <h3 className="text-3xl font-bold mb-6 text-white">
+                  <h3 className="text-3xl font-bold mb-6" style={{color: '#3D377A'}}>
                     {currentFeature.title}
                   </h3>
-                  <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                  <p className="text-lg mb-8 leading-relaxed" style={{color: '#A17CDD'}}>
                     {currentFeature.description}
                   </p>
                   <div>

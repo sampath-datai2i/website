@@ -71,9 +71,9 @@ const ServicesGrid = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 text-black dark:text-foreground">
-            Navigating Your Path to{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-6" style={{color: '#3D377A'}}>
+            Navigating Your Path to{' '}
+            <span style={{color: '#A17CDD'}}>
               AI and Data Success
             </span>
           </h2>

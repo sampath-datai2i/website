@@ -99,7 +99,7 @@ const MLOpsPage = () => {
               <Card key={index} className="bg-gradient-card border-border text-center">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold">{index + 1}</span>
+                    <span className="font-bold" style={{color: '#685874'}}>{index + 1}</span>
                   </div>
                   <h3 className="text-lg font-semibold text-card-foreground">
                     {stage}

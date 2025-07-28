@@ -6,117 +6,100 @@
 
 @layer base {
   :root {
-    --purple-850: #5B496A;
-    --purple-950: #4A3D5A;
-    --background: var(--purple-950);
-    --foreground: var(--white-100);
-    --card: var(--purple-850);
-    --card-foreground: var(--white-100);
-    --popover: var(--purple-850);
-    --popover-foreground: var(--white-100);
-    --primary: var(--purple-850);
-    --primary-foreground: var(--white-100);
-    --primary-glow: var(--purple-950);
-    --secondary: var(--purple-950);
-    --secondary-foreground: var(--white-100);
-    --muted: var(--purple-850);
-    --muted-foreground: var(--white-100);
-    --accent: var(--purple-950);
-    --accent-foreground: var(--white-100);
-    --destructive: var(--purple-950);
-    --destructive-foreground: var(--white-100);
-    --border: var(--purple-850);
-    --input: var(--purple-850);
-    --ring: var(--purple-950);
-    --navy-dark: var(--purple-950);
-    --navy-medium: var(--purple-850);
-    --navy-light: var(--white-100);
-    --purple: var(--purple-850);
-    --purple-light: var(--purple-850);
-    --pink: var(--purple-850);
-    --blue-accent: var(--purple-850);
-    --gradient-primary: linear-gradient(135deg, var(--purple-950), var(--purple-850));
-    --gradient-hero: linear-gradient(135deg, var(--purple-950), var(--purple-850));
-    --gradient-card: linear-gradient(145deg, var(--purple-850), var(--purple-950));
-    --shadow-purple: 0 20px 40px var(--purple-950);
-    --shadow-card: 0 10px 30px var(--purple-950-80);
-    --glow-purple: 0 0 40px var(--purple-950);
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.2s ease-out;
-    --radius: 0.75rem;
-    --sidebar-background: var(--purple-950);
-    --sidebar-foreground: var(--white-100);
-    --sidebar-primary: var(--purple-850);
-    --sidebar-primary-foreground: var(--white-100);
-    --sidebar-accent: var(--purple-950);
-    --sidebar-accent-foreground: var(--white-100);
-    --sidebar-border: var(--purple-850);
-    --sidebar-ring: var(--purple-950);
+    --white: #FFFFFF;
+    --light: #A17CDD;
+    --dark: #3D377A;
 
-    /* Base Color Palette - Easy to adjust */
-    --white-100: #F5F5F5;
-    --white-90: #F8F8F8;
-    --white-80: #FAFAFA;
-    --white-70: #FCFCFC;
-    --white-60: #FEFEFE;
-    --white-50: #FFFFFF;
-    
-    --purple-50: #F8F7FA;
-    --purple-100: #F0EEF5;
-    --purple-200: #E1DEEB;
-    --purple-300: #C7C0D8;
-    --purple-400: #A08AB1;
-    --purple-500: #A08AB1;
-    --purple-600: #8B7A9E;
-    --purple-700: #766A8B;
-    --purple-800: #685874;
-    --purple-900: #685874;
-    --purple-950: #4A3D5A;
-    --purple-900-80: rgba(104, 88, 116, 0.8);
-    --footer-background: var(--white-50);
-    --footer-foreground: var(--purple-950);
+    --background: var(--white);
+    --foreground: var(--dark);
+    --card: var(--white);
+    --card-foreground: var(--dark);
+    --popover: var(--white);
+    --popover-foreground: var(--dark);
+    --primary: var(--light);
+    --primary-foreground: var(--white);
+    --secondary: var(--dark);
+    --secondary-foreground: var(--white);
+    --muted: var(--light);
+    --muted-foreground: var(--dark);
+    --accent: var(--light);
+    --accent-foreground: var(--white);
+    --destructive: var(--dark);
+    --destructive-foreground: var(--white);
+    --border: var(--light);
+    --input: var(--light);
+    --ring: var(--light);
+    --sidebar-background: var(--white);
+    --sidebar-foreground: var(--dark);
+    --sidebar-primary: var(--light);
+    --sidebar-primary-foreground: var(--white);
+    --sidebar-accent: var(--light);
+    --sidebar-accent-foreground: var(--white);
+    --sidebar-border: var(--light);
+    --sidebar-ring: var(--light);
+    --footer-background: var(--white);
+    --footer-foreground: var(--dark);
   }
 
   .dark {
-    --background: var(--white-100);
-    --foreground: var(--purple-900);
-    --card: var(--white-50);
-    --card-foreground: var(--purple-900);
-    --popover: var(--white-50);
-    --popover-foreground: var(--purple-900);
-    --primary: var(--purple-500);
-    --primary-foreground: var(--white-100);
-    --primary-glow: var(--purple-500);
-    --secondary: var(--purple-900);
-    --secondary-foreground: var(--white-100);
-    --muted: var(--purple-500);
-    --muted-foreground: var(--purple-900);
-    --accent: var(--purple-500);
-    --accent-foreground: var(--white-100);
-    --destructive: var(--purple-900);
-    --destructive-foreground: var(--white-100);
-    --border: var(--purple-500);
-    --input: var(--purple-500);
-    --ring: var(--purple-500);
-    --sidebar-background: var(--white-100);
-    --sidebar-foreground: var(--purple-900);
-    --sidebar-primary: var(--purple-500);
-    --sidebar-primary-foreground: var(--white-100);
-    --sidebar-accent: var(--purple-500);
-    --sidebar-accent-foreground: var(--white-100);
-    --sidebar-border: var(--purple-500);
-    --sidebar-ring: var(--purple-500);
+    --background: var(--white);
+    --foreground: var(--dark);
+    --card: var(--white);
+    --card-foreground: var(--dark);
+    --popover: var(--white);
+    --popover-foreground: var(--dark);
+    --primary: var(--light);
+    --primary-foreground: var(--white);
+    --secondary: var(--dark);
+    --secondary-foreground: var(--white);
+    --muted: var(--light);
+    --muted-foreground: var(--dark);
+    --accent: var(--light);
+    --accent-foreground: var(--white);
+    --destructive: var(--dark);
+    --destructive-foreground: var(--white);
+    --border: var(--light);
+    --input: var(--light);
+    --ring: var(--light);
+    --sidebar-background: var(--white);
+    --sidebar-foreground: var(--dark);
+    --sidebar-primary: var(--light);
+    --sidebar-primary-foreground: var(--white);
+    --sidebar-accent: var(--light);
+    --sidebar-accent-foreground: var(--white);
+    --sidebar-border: var(--light);
+    --sidebar-ring: var(--light);
+    --footer-background: var(--white);
+    --footer-foreground: var(--dark);
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-0;
   }
-
   body {
-    @apply bg-background text-foreground;
-    transition: background-color 0.3s, color 0.3s;
+    @apply bg-background;
+    color: var(--foreground);
+    transition: background-color 0.2s, color 0.2s;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--dark);
+  }
+  .text-muted-foreground {
+    color: var(--light) !important;
+  }
+  .text-primary {
+    color: var(--light) !important;
+  }
+  .text-secondary {
+    color: var(--dark) !important;
+  }
+  .text-accent {
+    color: var(--light) !important;
+  }
+  .text-white {
+    color: var(--white) !important;
   }
 }
 

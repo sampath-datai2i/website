@@ -53,14 +53,11 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Logo and CTA */}
-          <div className="lg:col-span-2">
-            <img src={datai2iLogo} alt="Datai2i" className="h-28 w-auto object-contain -my-6 mb-6" />
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              Empowering organizations to turn data into a strategic asset with AI-driven transformation.
-            </p>
-            <Button variant="primary" size="lg">
-              Get Started Today
-            </Button>
+          <div className="lg:col-span-2 flex flex-col items-center justify-center">
+            <img src={datai2iLogo} alt="Datai2i" className="h-28 w-auto object-contain mb-2" />
+            <blockquote className="italic text-lg text-center mt-2 max-w-md" style={{color: '#A17CDD'}}>
+              "Artificial Intelligence is not just a tool, but a partner in unlocking human potential."
+            </blockquote>
           </div>
 
           {/* Footer Links */}
@@ -86,10 +83,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-border pt-8">
+        <div className="pt-2">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-muted-foreground text-sm">
-              © 2024 Datai2i. All rights reserved.
+            <p className="text-sm" style={{color: '#3D377A'}}>
+              © 2025 Datai2i. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">

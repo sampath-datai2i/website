@@ -79,7 +79,7 @@ const Navigation = () => {
             {navigationItems.map((item) => (
               <HoverCard key={item.label}>
                 <HoverCardTrigger asChild>
-                  <Button variant="nav" className="flex items-center gap-1 text-foreground text-lg hover:text-white hover:bg-purple-950 transition-transform transition-colors px-4 py-2 rounded-full hover:scale-110">
+                  <Button variant="nav" className="flex items-center gap-1 text-[#3D377A] text-lg hover:text-white hover:bg-[#A17CDD] transition-transform transition-colors px-4 py-2 rounded-full hover:scale-110">
                     {item.label}
                   </Button>
                 </HoverCardTrigger>
@@ -93,7 +93,7 @@ const Navigation = () => {
                         <Link 
                           key={subItem.name} 
                           to={subItem.path} 
-                          className="block text-muted-foreground hover:text-card-foreground hover:bg-purple-50 px-3 py-2 rounded-md text-sm transition-colors"
+                          className="block text-[#3D377A] hover:text-[#A17CDD] px-3 py-2 rounded-md text-sm transition-colors"
                         >
                           {subItem.name}
                         </Link>
@@ -137,7 +137,7 @@ const Navigation = () => {
                     {item.label}
                   </div>
                   {item.items.map((subItem) => (
-                    <Link key={subItem.name} to={subItem.path} className="block text-muted-foreground px-6 py-1 text-sm hover:text-card-foreground cursor-pointer">
+                    <Link key={subItem.name} to={subItem.path} className="block text-[#A08AB1] px-6 py-1 text-sm hover:text-card-foreground cursor-pointer">
                       {subItem.name}
                     </Link>
                   ))}
